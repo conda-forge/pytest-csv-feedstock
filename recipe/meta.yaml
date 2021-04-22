@@ -1,5 +1,5 @@
 {% set name = "pytest-csv" %}
-{% set version = "2.0.2" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2bbe266f1860354c8878bde6d990bd925743df189dbfd1705db17689a21430bf
+  sha256: 6d01e7db1aa2137eae822d3fdb2d6a5dd0ce736548593b5311ae3cf41e2d12d4
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -33,7 +33,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL
   license_file: COPYING
-  summary: 'CSV reporter for pytest.'
+  summary: CSV reporter for pytest.
 
 extra:
   recipe-maintainers:
